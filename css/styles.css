@@ -8,10 +8,12 @@
   --site-width: 980px;
   --peach:        #FFD5BB;
   --peach-soft:   rgba(255, 213, 187, 0.52);
+  --peach-border: #FF8C6B;
   --teal-dark:    #325A67;
   --green-dark:   #1F552C;
   --gray-bg:      #DBDBDB;
   --gray-footer:  #C7C7C7;
+  --rule:         #767676;
   --ink:          #000;
   --muted:        #767676;
   --white:        #fff;
@@ -156,7 +158,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 /* =========================================================
-   MAIN — cards
+   MAIN — home cards
    ========================================================= */
 main { display: block; }
 
@@ -188,7 +190,7 @@ main { display: block; }
 }
 
 /* =========================================================
-   VIDEO SECTION
+   VIDEO SECTION (home)
    ========================================================= */
 .video {
   background: var(--gray-bg);
@@ -200,7 +202,6 @@ main { display: block; }
   margin: 0 auto;
 }
 
-/* Responsive 16:9 YouTube embed */
 .video-embed {
   position: relative;
   width: 100%;
@@ -216,6 +217,259 @@ main { display: block; }
   height: 100%;
   border: 0;
   display: block;
+}
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+.about-page {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.about-intro h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 0 0 32px;
+}
+
+.about-body {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.about-body p { margin: 0 0 1em; }
+.about-body a {
+  color: var(--teal-dark);
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+/* Team */
+.team-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.team-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.team-member h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 8px 0 0;
+}
+.member-divider {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  width: 72px;
+  margin: 4px 0 8px;
+}
+.team-member .role {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.team-member p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+.contact-page {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.contact-intro h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.contact-info {
+  padding-top: 8px;
+}
+.contact-info h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+.contact-info .phone {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-info .phone a {
+  color: var(--ink);
+}
+.contact-info .phone a:hover {
+  color: var(--teal-dark);
+}
+.info-divider {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  width: 36px;
+  margin: 18px 0;
+}
+.contact-social {
+  margin-top: 8px;
+}
+.contact-social a {
+  width: 48px;
+  height: 48px;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-note {
+  margin: 0 0 4px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--muted);
+  background: #fff7f0;
+  border-left: 3px solid var(--peach-border);
+  border-radius: 2px;
+}
+.form-note code {
+  background: #fff;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: #373B4D;
+}
+.contact-form label .req {
+  color: var(--peach-border);
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--peach);
+  border: 1px solid var(--peach-border);
+  border-radius: 0;
+  padding: 10px 12px;
+  outline: none;
+  box-shadow: -4px 4px 0 0 var(--peach-border);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #373B4D;
+  opacity: 0.7;
+  font-weight: 400;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 213, 187, 0.65);
+  border-bottom-width: 2px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 170px;
+  font-weight: 400;
+}
+
+.submit-btn {
+  align-self: flex-end;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #373B4D;
+  background: var(--white);
+  border: 3px solid var(--peach-border);
+  border-radius: 4px;
+  padding: 8px 28px;
+  box-shadow: -11px 11px 0 0 var(--peach-border);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+.submit-btn:hover {
+  color: var(--peach-border);
+}
+.submit-btn:active {
+  transform: translate(-3px, 3px);
+  box-shadow: -8px 8px 0 0 var(--peach-border);
+}
+
+/* Map */
+.map {
+  margin-top: 16px;
+}
+.map iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+  border-radius: 2px;
 }
 
 /* =========================================================
@@ -271,10 +525,32 @@ main { display: block; }
     margin-top: 28px;
   }
   .card img { height: auto; max-height: 260px; }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    justify-items: center;
+    text-align: center;
+  }
+  .team-member { align-items: center; }
+  .member-divider { margin-left: auto; margin-right: auto; }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .submit-btn { align-self: stretch; }
 }
 
 @media (max-width: 480px) {
   .logo { width: 220px; }
   .tagline { font-size: 16px; }
   .video { padding: 32px 16px; }
+  .about-body { font-size: 16px; }
+  .about-intro h1,
+  .team-heading,
+  .contact-intro h1 { font-size: 22px; }
+  .submit-btn { box-shadow: -6px 6px 0 0 var(--peach-border); }
+  .contact-form input,
+  .contact-form textarea { box-shadow: -3px 3px 0 0 var(--peach-border); }
 }
